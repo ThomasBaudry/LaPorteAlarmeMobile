@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AlarmeLaporte.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:contentDescription="Enter How Much Cookies You Want"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center"
+        app:popupTheme="@style/Theme.AlarmeLaporte.PopupOverlay" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarme LaPorte"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="34sp"
+        app:layout_anchor="@+id/toolbar"
+        app:layout_anchorGravity="center" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="100dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:contentDescription="Enter How Much Cookies You Want"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#0F45CA"
+            app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="210dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="310dp" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="Button" />
+
+        <include
+            layout="@layout/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="204dp"
+        android:layout_height="161dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="310dp" >
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="Button" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="600dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="2023/03/03"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="500dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="20:01"
+        android:textSize="48sp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
